@@ -36,7 +36,7 @@ function Footer(props) {
     <div id="footer">
       <div>
         <button type="button" onClick={() => {
-          props.printText();
+          props.printText(props.address);
         }}>{props.address}</button>
       </div>
     </div>
