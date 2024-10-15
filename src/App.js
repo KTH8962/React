@@ -58,7 +58,7 @@ function App() {
       <Main list={subject1}></Main>
       <Main list={subject2}></Main>
       <Footer address="경기도" printText={(text)=>{
-        alert(text);
+        console.log(text);
       }}></Footer>
       <Footer address="인천광역시" printText={(text)=>{
         alert(text);
