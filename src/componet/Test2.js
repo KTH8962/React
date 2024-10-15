@@ -11,7 +11,7 @@ function Btn(props){
 function App() {
     const [state, setState] = useState(true);
     const [count, setCount] = useState(0);
-    let style;
+    
     useEffect(() => {
         let time
         if(state) {
@@ -24,7 +24,7 @@ function App() {
             clearInterval(time);
         };
     },[state]);
-    
+
     return (
         <>
             <Btn state={state} btnClick={() => {
