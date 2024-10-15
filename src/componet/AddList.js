@@ -16,7 +16,7 @@ function App() {
         <>
             <input type="text" value={subject} onChange={(e) => {
                 setSubject(e.target.value);
-            }}></input>
+            }}/>
             <button type="button" onClick={addSubject}>추가</button>
             <ul>{list.map((item, index) => {return <li key={index}>{item}</li>})}</ul>
         </>

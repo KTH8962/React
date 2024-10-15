@@ -7,7 +7,7 @@ function App() {
     };
     return(
         <>
-            <input type="text" value={text} onChange={inputText}></input>
+            <input type="text" value={text} onChange={inputText}/>
             <button type="button">버튼</button>
             <div>{text}</div>
         </>
