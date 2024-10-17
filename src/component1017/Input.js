@@ -20,6 +20,7 @@ function Input(props) {
             calc = `${num1 / num2}`;
         }
         setNum(calc);
+        props.setData(calc);
     };
     return (
         <div>
