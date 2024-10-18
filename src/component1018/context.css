@@ -1,0 +1,7 @@
+* {
+    text-align: center;
+}
+
+.app > * {
+    padding: 30px 0;
+}

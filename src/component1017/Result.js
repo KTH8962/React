@@ -4,7 +4,7 @@ function Result(props) {
     // 숫자 2개, 문자(연산자) 받아서 결과물을 출력
     return (
         <div>
-           계산식과 같은 컴포넌트 결과 : {props.result}
+           자식 컴포넌트 결과 : {props.result}
         </div>
     );
 }

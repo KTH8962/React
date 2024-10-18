@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 function numFunc(count) {
-    for(let i=0; i < 50000; i++) {
+    for(let i=0; i < 10000; i++) {
         console.log(i);
     }
     return count * 2;

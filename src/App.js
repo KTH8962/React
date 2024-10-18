@@ -1,15 +1,12 @@
-import { useState } from "react";
-import Input from "./component1017/Input";
-import Result2 from "./component1017/Result2";
+import React from 'react';
+import ContextTest from './component1018/ContextTest';
 
 function App() {
-  const [data, setData] = useState(0);
-  //const 
+
   return (
-    <>
-      <Result2 result={data}/>
-      <Input setData={setData} />
-    </>
+    <div className="app">
+      <ContextTest />
+    </div>
   );
 }
 

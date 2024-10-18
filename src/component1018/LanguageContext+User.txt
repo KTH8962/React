@@ -1,0 +1,91 @@
+app.js
+
+const [language, setLanguage] = useState('ko'); 
+
+const toggleLanguage = () => {
+    setLanguage(prevLang => (prevLang === 'en' ? 'ko' : 'en'));
+};
+
+return (
+    <div className="app">
+    <LanguageContext.Provider value={{language, toggleLanguage}}>
+        <Page />
+    </LanguageContext.Provider>
+    </div>
+);
+
+header.js
+import { LanguageContext } from '../context/LanguageContext';
+
+function Header() {
+  const {language, toggleLanguage} = useContext(LanguageContext);
+  return (
+    <header className="header">
+      <h1>{language === 'en' ? 'Language Props Example' : '언어 프롭스 예시'}</h1>
+      <button onClick={toggleLanguage}>
+        {language === 'en' ? 'Switch to Korean' : '영어로 전환'}
+      </button>
+    </header>
+  );
+}
+
+
+main.js
+import React, { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext';
+
+function Main() {
+  const {language} = useContext(LanguageContext);
+  return (
+    <main className="main">
+      {language === 'en' ? (
+        <p>This is an example of using React Props to switch languages.</p>
+      ) : (
+        <p>React Props를 사용하여 언어를 전환하는 예시입니다.</p>
+      )}
+    </main>
+  );
+}
+
+
+footer.js
+import { LanguageContext } from '../context/LanguageContext';
+
+function Footer() {
+  const {language} = useContext(LanguageContext);
+  return (
+    <footer className="footer">
+      {language === 'en' ? <p>All rights reserved.</p> : <p>모든 권리 보유.</p>}
+    </footer>
+  );
+}
+
+
+
+
+
+
+user app.js
+import React, { useState } from 'react';
+import Page from './component1018/Page';
+import { UserContext } from './context/UserContext';
+
+function App() {
+  const [user, setUser] = useState(null);
+  const login = () => {
+    setUser({ name: '홍길동', email: 'hong@naver.com' });
+  };
+  const logout = () => {
+    setUser(null);
+  };
+
+  return (
+    <div className="app">
+      <UserContext.Provider value={{user, login, logout}}>
+        <Page />
+      </UserContext.Provider>
+    </div>
+  );
+}
+
+export default App;
