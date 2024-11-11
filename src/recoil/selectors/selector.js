@@ -11,6 +11,9 @@ const doubledState = selector({
 
 const doubledStateSet = selector({
     key: 'doubledStateSet',
+    get: ({get}) => {
+        return get(counterState);
+    },
     set: ({set}, newValue) => {
         set(counterState, newValue);
     }

@@ -16,7 +16,7 @@ function Test(props) {
         <div>            
             <p>기존: <Link to="/">{num}</Link></p>
             <p>2배: <Link to="/">{doubleNum}</Link></p>
-            <button type='button' onClick={incrementValue}></button>
+            <button type='button' onClick={incrementValue}>셀렉터버튼</button>
         </div>
     );
 }
