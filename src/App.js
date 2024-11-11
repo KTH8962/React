@@ -1,12 +1,20 @@
 import React from 'react';
-import ContextTest from './component1018/ContextTest';
+import { RecoilRoot } from 'recoil';
+import Counter from './recoil/Counter';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Test from './recoil/Test';
 
 function App() {
 
   return (
-    <div className="app">
-      <ContextTest />
-    </div>
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Counter />}/>
+          <Route path="/test" element={<Test />}/>
+        </Routes>        
+      </BrowserRouter>
+    </RecoilRoot>
   );
 }
 
